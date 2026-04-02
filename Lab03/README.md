@@ -29,15 +29,12 @@
 ---
 
 ## Bài 1: Thiết lập định tuyến cho các thao tác với review trong ứng dụng minh hoạ
+
 <br>
 
 ## 1.1 Định tuyến này sẽ có đường dẫn cuối cùng là ‘/review’
 
 **Giải thích:** Cập nhật tệp tin `movies.route.js` để thiết lập định tuyến có đường dẫn cơ sở `/review`, chuẩn bị đón các luồng request xử lý cho đánh giá.
-
-**Minh chứng:**
-
-![1.1](image/1.1.png)
 
 <br>
 
@@ -45,19 +42,11 @@
 
 **Giải thích:** Thêm phương thức `.post()` nối vào định tuyến `/review`, gọi đến hàm `apiPostReview` trong lớp `ReviewsController` để tiến hành thêm dữ liệu.
 
-**Minh chứng:**
-
-![1.2](image/1.2.png)
-
 <br>
 
 ## 1.3 Thiết lập định tuyến sửa review trên db thông qua phương thức put
 
 **Giải thích:** Thêm phương thức `.put()` nối tiếp theo quy chuẩn REST để hướng các yêu cầu sửa đổi đánh giá đến logic của `apiUpdateReview`.
-
-**Minh chứng:**
-
-![1.3](image/1.3.png)
 
 <br>
 
@@ -65,15 +54,14 @@
 
 **Giải thích:** Thêm phương thức `.delete()` phục vụ xóa nội dung, gọi hàm chức năng định sẵn `apiDeleteReview`.
 
-**Minh chứng:**
-
-![1.4](image/1.4.png)
-
 <br>
 
----
+**Minh chứng:**
+
+![1.1](image/1.1.png)
 
 ## Bài 2: Thiết lập Controller cho review
+
 <br>
 
 ## 2.1 Tạo tệp tin reviews.controller.js trong thư mục api
@@ -129,6 +117,7 @@
 ---
 
 ## Bài 3: Thiết lập DAO cho reviews
+
 <br>
 
 ## 3.1 Trong thư mục DAO tạo tệp tin reviewsDAO.js
@@ -194,7 +183,8 @@
 **Giải thích:** Tiến hành thực thi test thử các API gửi dữ liệu JSON (body) chứa MSSV làm id người dùng thông qua Postman với đủ thao tác thêm xóa sửa.
 
 **Phương thức POST**
-Body : 
+Body :
+
 ```json
 {
   "movie_id": "<Một_ID_phim_hợp_lệ_từ_DB>",
@@ -211,7 +201,8 @@ Body :
 <br>
 
 **Phương thức PUT**
-Body : 
+Body :
+
 ```json
 {
   "review_id": "<ID_của_review_cần_sửa>",
@@ -227,7 +218,8 @@ Body :
 <br>
 
 **Phương thức DELETE**
-Body : 
+Body :
+
 ```json
 {
   "review_id": "<ID_của_review_cần_xóa>",
@@ -244,6 +236,7 @@ Body :
 ---
 
 ## Bài 4: Hoàn thành back-end cho ứng dụng minh họa
+
 <br>
 
 ## 4.1 Thêm 2 định tuyến lấy tất cả thông tin phim kết nối review và danh sách ratings
